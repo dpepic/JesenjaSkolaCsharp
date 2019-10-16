@@ -10,8 +10,12 @@ namespace Karakter
     {
         static void Main(string[] args)
         {
-            char Karakter = 'a';
+            int broj = 5;
 
+            Console.WriteLine(broj++);//postfix se izvrsava na samom kraju
+            Console.WriteLine(++broj);//prefix se izvrsava apsolutno prvi
+            char Karakter = 'a';
+            
             Console.WriteLine("Koliko slova po redu? ");
             
             int slova = int.Parse(Console.ReadLine());
@@ -23,8 +27,7 @@ namespace Karakter
                 {
                     Console.WriteLine();
                 }
-
-                Karakter += (char)1; 
+                Karakter++; 
             }
             
 
