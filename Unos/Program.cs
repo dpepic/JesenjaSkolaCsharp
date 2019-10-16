@@ -55,10 +55,28 @@ namespace Unos
             if ( x == y) //duplo jednako kada poredimo
             {
                 Console.WriteLine("Prva grana");
-            } else if (x == y)
+            } else if (x != y)
             {
                 Console.WriteLine("Druga grana");
             }
+
+            Console.WriteLine("Unesite slovo: ");
+            string slovo = Console.ReadLine();
+
+            switch (slovo)
+            {
+                case "a":
+                    Console.WriteLine("Uneli ste \"a\"");
+                    break;
+                case "b":
+                case "c":
+                    Console.WriteLine("Uneli ste \"c\" a mozda i \"b\"");
+                    break;
+                case "d":
+                    Console.WriteLine("Uneli ste \"d\"");
+                    break;
+            }
+
             Console.WriteLine($"Zbir je: {broj1 + broj2} .");
             Console.ReadKey();
             
