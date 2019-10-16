@@ -12,7 +12,21 @@ namespace Karakter
         {
             char Karakter = 'a';
 
-            Console.WriteLine(Karakter);
+            Console.WriteLine("Koliko slova po redu? ");
+            
+            int slova = int.Parse(Console.ReadLine());
+
+            while (Karakter <= 122)
+            {
+                Console.Write(Karakter);
+                if ((Karakter - 96) % slova == 0)
+                {
+                    Console.WriteLine();
+                }
+
+                Karakter += (char)1; 
+            }
+            
 
             int brojac = 20;
 
@@ -24,11 +38,11 @@ namespace Karakter
 
             do
             {
-                Console.WriteLine(brojac);
+                //Console.WriteLine(brojac);
                 brojac += 1;
             } while (brojac < 5);
 
-            Console.WriteLine(Karakter);
+            
             Console.ReadKey();
 
         }
