@@ -67,7 +67,7 @@ namespace Unos
             {
                 case "a":
                     Console.WriteLine("Uneli ste \"a\"");
-                    break;
+                    break;//asdasd
                 case "b":
                 case "c":
                     Console.WriteLine("Uneli ste \"c\" a mozda i \"b\"");

@@ -81,6 +81,12 @@ namespace Promenljive
             bool logika = false; //Boolean moze imati samo dve vrednost, true ili false.
                                  //Spada u domen logicke matematike, cesto cemo da ga koristimo
 
+            int nekiBroj = 5;
+            nekiBroj = nekiBroj + 3;
+            nekiBroj += 3;
+            nekiBroj *= 2; //isto kao
+                   //nekiBroj = nekiBroj * 2
+
             Console.ReadKey(); //ReadKey nam inace sluzi da poslusamo sta ce korisnik da pritisne, no u ovom slucaju
                                //ga koristimo da bi zadrzali aplikaciju da se ne zatvori pre no sto vidimo sta je
                                //to ispisala :) 
