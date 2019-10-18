@@ -85,7 +85,28 @@ namespace Promenljive
             nekiBroj = nekiBroj + 3;
             nekiBroj += 3;
             nekiBroj *= 2; //isto kao
-                   //nekiBroj = nekiBroj * 2
+                           //nekiBroj = nekiBroj * 2
+            nekiBroj++; //nekiBroj = nekiBroj + 1
+                        //postfix se izvrsava apsolutno zadnji
+
+
+            int[] nizCelihBrojeva = { 1, 6, 7, 20, 409 };
+
+            Console.WriteLine("Unesite velicinu: ");
+            int elemenata = int.Parse(Console.ReadLine());
+            int[] drugiNiz = new int[elemenata];
+
+            for (int i = 1; i <= elemenata; i++)
+            {
+                drugiNiz[i - 1] = i * 2;
+            }
+
+            Console.WriteLine($"Niz je dugacak: {drugiNiz.Length}");
+            
+            foreach (int broj in drugiNiz)
+            {
+                Console.WriteLine(broj);
+            }
 
             Console.ReadKey(); //ReadKey nam inace sluzi da poslusamo sta ce korisnik da pritisne, no u ovom slucaju
                                //ga koristimo da bi zadrzali aplikaciju da se ne zatvori pre no sto vidimo sta je
