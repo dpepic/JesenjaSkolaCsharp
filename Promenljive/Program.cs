@@ -88,12 +88,31 @@ namespace Promenljive
                            //nekiBroj = nekiBroj * 2
             nekiBroj++; //nekiBroj = nekiBroj + 1
                         //postfix se izvrsava apsolutno zadnji
+            --nekiBroj; //nekiBroj = nekiBroj - 1
+                        //prefix se izvrsava apsolutno prvi
+            nekiBroj = 5;
+            Console.WriteLine(nekiBroj++); //u trenutku stampanja
+                                           //jos uvek 5, jer se postfix
+                                           //radi tek kada se zavrsi sve ostalo
+            Console.WriteLine(++nekiBroj); //U ovoj liniji koda brojac nam je 6,
+                                           //prefix ++ ide prvi, pa prvo dodaje, imamo 7,
+                                           //i tek onda stampa :)
 
 
+            //Niz je skup vrednosti. U jednoj promenljivoj
+            //mozemo da imamo koliko zelimo (tj. koliko ima RAM-a :D) vrednosti
+            
+            //Kada vec znamo sta ce biti u nizu mozemo da ga napisemo ovako:
             int[] nizCelihBrojeva = { 1, 6, 7, 20, 409 };
+
+            //Bitna stvar je da su nam nizovi adresirani od 0,
+            //znaci prvi element je na indeksu 0, ne 1 :)
+            Console.WriteLine(nizCelihBrojeva[0]);
 
             Console.WriteLine("Unesite velicinu: ");
             int elemenata = int.Parse(Console.ReadLine());
+            
+            
             int[] drugiNiz = new int[elemenata];
 
             for (int i = 1; i <= elemenata; i++)
