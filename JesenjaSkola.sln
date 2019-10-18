@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unos", "Unos\Unos.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karakter", "Karakter\Karakter.csproj", "{220F4D06-65C3-487E-8FE6-EC136548C1A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Petlje", "Petlje\Petlje.csproj", "{AF0A8C57-EF2F-42E4-BE5C-8D248641B762}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{220F4D06-65C3-487E-8FE6-EC136548C1A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{220F4D06-65C3-487E-8FE6-EC136548C1A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{220F4D06-65C3-487E-8FE6-EC136548C1A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF0A8C57-EF2F-42E4-BE5C-8D248641B762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF0A8C57-EF2F-42E4-BE5C-8D248641B762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF0A8C57-EF2F-42E4-BE5C-8D248641B762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF0A8C57-EF2F-42E4-BE5C-8D248641B762}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
