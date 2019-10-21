@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karakter", "Karakter\Karakt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Petlje", "Petlje\Petlje.csproj", "{AF0A8C57-EF2F-42E4-BE5C-8D248641B762}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Primeri", "Primeri", "{02541FB0-0DDE-4060-8422-816F598D2305}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrviDomaci", "PrviDomaci\PrviDomaci.csproj", "{78A0A214-3870-4CF4-A789-4A64AB142327}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelefonskiImenik", "TelefonskiImenik\TelefonskiImenik\TelefonskiImenik.csproj", "{D3FB09A2-9C9D-4E20-8B96-EB28A724AB8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,9 +45,22 @@ Global
 		{AF0A8C57-EF2F-42E4-BE5C-8D248641B762}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF0A8C57-EF2F-42E4-BE5C-8D248641B762}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF0A8C57-EF2F-42E4-BE5C-8D248641B762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78A0A214-3870-4CF4-A789-4A64AB142327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78A0A214-3870-4CF4-A789-4A64AB142327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78A0A214-3870-4CF4-A789-4A64AB142327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78A0A214-3870-4CF4-A789-4A64AB142327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3FB09A2-9C9D-4E20-8B96-EB28A724AB8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3FB09A2-9C9D-4E20-8B96-EB28A724AB8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3FB09A2-9C9D-4E20-8B96-EB28A724AB8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3FB09A2-9C9D-4E20-8B96-EB28A724AB8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{220F4D06-65C3-487E-8FE6-EC136548C1A3} = {02541FB0-0DDE-4060-8422-816F598D2305}
+		{78A0A214-3870-4CF4-A789-4A64AB142327} = {02541FB0-0DDE-4060-8422-816F598D2305}
+		{D3FB09A2-9C9D-4E20-8B96-EB28A724AB8A} = {02541FB0-0DDE-4060-8422-816F598D2305}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5639B62F-32CD-4402-9E31-A5AAE9F6F9F7}
