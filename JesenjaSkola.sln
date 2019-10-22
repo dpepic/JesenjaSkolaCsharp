@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrviDomaci", "PrviDomaci\Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelefonskiImenik", "TelefonskiImenik\TelefonskiImenik\TelefonskiImenik.csproj", "{D3FB09A2-9C9D-4E20-8B96-EB28A724AB8A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuple", "Tuple\Tuple.csproj", "{2B2B1CC0-C50A-4556-BF60-3E1BF5D98420}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domaci", "Domaci\Domaci.csproj", "{F4B18EC9-6DFF-480C-9201-6CD0D75E8994}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +57,14 @@ Global
 		{D3FB09A2-9C9D-4E20-8B96-EB28A724AB8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3FB09A2-9C9D-4E20-8B96-EB28A724AB8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3FB09A2-9C9D-4E20-8B96-EB28A724AB8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B2B1CC0-C50A-4556-BF60-3E1BF5D98420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B2B1CC0-C50A-4556-BF60-3E1BF5D98420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B2B1CC0-C50A-4556-BF60-3E1BF5D98420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B2B1CC0-C50A-4556-BF60-3E1BF5D98420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4B18EC9-6DFF-480C-9201-6CD0D75E8994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B18EC9-6DFF-480C-9201-6CD0D75E8994}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4B18EC9-6DFF-480C-9201-6CD0D75E8994}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4B18EC9-6DFF-480C-9201-6CD0D75E8994}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

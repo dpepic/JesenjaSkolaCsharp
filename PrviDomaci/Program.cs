@@ -27,7 +27,7 @@ namespace Zadatak
             for (int brojac = 0; brojac <= kraj - pocetak; brojac++)
             {
                 Console.Write($" {(char)(pocetak + brojac)} ");
-                if ((brojac + 1) % linija == 0)
+                if ((brojac) % linija == 0)
                     Console.WriteLine();
             }
 
