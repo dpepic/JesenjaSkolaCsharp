@@ -1,4 +1,42 @@
-﻿/* Domaci za nedelju 30.10 -- 6.11
+﻿/* Domaci za nedelju 11.11 -- 17.11
+ * Projektni zadatk -- Pogadjanje reci
+ * 
+ * Imacemo fajl sa hrpom reci (najlakse da rec bude
+ * po redu, no kako god zelite :) )
+ * 
+ * Kada se aplikacija upali, prikazemo korisniku
+ * meni iz koga moze da pogadja rec, vidi top listu 
+ * bodova i, naravnom izadje :) .
+ * 
+ * Ako izabere pogadjanje reci, uzima se nasumicno
+ * rec iz naseg dokumenta. Prikaze se koliko slova ima,
+ * npr. ako je rec "test" prikaze se _ _ _ _
+ * Korisnik u tom momenmtu moze da unese slovo ili
+ * da proba da pogodi rec. Ako unese jedno slovo
+ * moramo da proverimo da li ga rec sadrzi. Npr,
+ * ako je uneo 't' sada treba da se prikaze
+ * t _ _ t
+ * Posto je string niz karaktera, ovu pretragu najlakse
+ * obavite sa jednom for petljom, jer ako je 
+ * string rec vi imate svako pravo da kazete rec[0] da
+ * vidite prvo slovo. A predlazem for zato sto vam 
+ * treba indeks da bi znali gde da upisete slova
+ * u ovaj string koji prikazujete korisniku.
+ * 
+ * Racuna se broj pokusaja za pogodak. Kada
+ * korisnik pogodi rec treba da proverimo top listu, 
+ * koja se sastoji od 5 najboljih,
+ * ako na njoj ima jos mesta, ili ako je korisnik
+ * pobedio neki skor, treba da mu ponudimo da upise
+ * ime i da ga stavimo na mesto koje mu pripada
+ * 
+ * Top listu najbrzih cuvamo u fajlu
+ * da bi ostala i kada ugasimo aplikaciju :)
+ * 
+ * 
+ * 
+ * 
+ * Domaci za nedelju 30.10 -- 6.11
  *  Projektni zadatak -- POS (point of sales)
  *  
  *  Cilj nam je da napravimo program gde korisnik
