@@ -10,25 +10,21 @@ namespace POSvOOP
 	{
 		static void Main(string[] args)
 		{
-			
-			Artikal art = new Artikal(4, "test", 15);
+			List<Artikal> Artikli = new List<Artikal>();
+
 			do
 			{
-				Console.WriteLine($"Trenutna kolicina: {art.kolicina}");
-				Console.Write("Unesite kolicinu: ");
-				int kol = int.Parse(Console.ReadLine());
+				Console.WriteLine("Unesite sifra;naziv;kolicina;cena");
+				string[] unos = Console.ReadLine().Split(';');
+				double d = 4.1234567899999999;
 
-				if (art.SkiniSaStanja(kol))
-				{
-					Console.WriteLine($"Trenutna kolicina: {art.kolicina}");
-				}
-				else
-				{
-					Console.WriteLine("Neuspelo :(");
-					Console.WriteLine($"Trenutna kolicina: {art.kolicina}");
-				}
+				Artikli.Add(new Artikal(int.Parse(unos[0]),
+										unos[1],
+										int.Parse(unos[2]),
+										decimal.Parse(unos[3])));
 
 			} while (true);
+
 		}
 	}
 
