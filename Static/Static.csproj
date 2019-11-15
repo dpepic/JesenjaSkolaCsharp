@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{00764A08-0492-49FF-87C1-8B668FD8F63D}</ProjectGuid>
+    <ProjectGuid>{6369801E-7F46-40C9-BDA3-EBFB410EEFC6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>POSvOOP</RootNamespace>
-    <AssemblyName>POSvOOP</AssemblyName>
+    <RootNamespace>Static</RootNamespace>
+    <AssemblyName>Static</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,12 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PoslovniObjekti\PoslovniObjekti.csproj">
-      <Project>{ef72fc6a-6df4-4cb1-9423-74033e4c9217}</Project>
-      <Name>PoslovniObjekti</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
