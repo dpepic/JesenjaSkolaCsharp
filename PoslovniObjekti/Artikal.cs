@@ -8,10 +8,16 @@ namespace POS.PoslovniObjekti
 {
 	public class Artikal
 	{
-		public int sifra;
+		public long sifra;
 		public string naziv;
 		public int kolicina;
 		public decimal cena;
+		public static long brojac;
+
+		public void StampajSe()
+		{
+			Console.WriteLine($"Sifra: {sifra} Naziv: {naziv} Kolicina: {kolicina} Cena: {cena}");
+		}
 
 		public bool SkiniSaStanja(int kol)
 		{
@@ -26,17 +32,16 @@ namespace POS.PoslovniObjekti
 			}
 		}
 
-		public Artikal(int s,
+		public Artikal(long s,
 					   string n,
 					   int k)
 		{
-
 			sifra = s;
 			naziv = n;
 			kolicina = k;
 		}
 
-		public Artikal(int s,
+		public Artikal(long s,
 						string n,
 						int k,
 						decimal c)
