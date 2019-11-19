@@ -12,7 +12,6 @@ namespace POS.GlavniProgram
 		private static void Main(string[] args)
 		{
 
-
 			ConsoleKeyInfo unos;
 			do
 			{
