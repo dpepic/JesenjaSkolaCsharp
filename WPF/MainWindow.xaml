@@ -8,13 +8,12 @@
         Title="MainWindow" Height="450" Width="800">
 
 	<DockPanel>
-		<StackPanel DockPanel.Dock="Right" Width="100" CanHorizontallyScroll="True" CanVerticallyScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True">
-			<Button Name="btDugme" Content="1" FontSize="72" Click="btDugme_Click" />
-			<Button Content="2" FontSize="72" Margin="20"/>
-			<Button Content="3" FontSize="72" Margin="20"/>
-			<Button Content="4" FontSize="72" Margin="20"/>
+		<StackPanel DockPanel.Dock="Right" Width="150" CanHorizontallyScroll="True" CanVerticallyScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True">
+			<Button Name="Oduzmi" Content="--" FontSize="72" Click="Oduzmi_Click" />
+			<Button Name="Nuliraj" Content="0" FontSize="72" Click="Nuliraj_Click" Margin="20"/>
+			<Button Name="Dodaj" Content="++" FontSize="72" Click="Dodaj_Click" Margin="20"/>
 		</StackPanel>
-		<Label Name="lbNesto" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="42" Margin="0,203,0,207.667"/>
+		<Label Name="lbNesto" Content="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="74"/>
 	</DockPanel>
 	
 </Window>

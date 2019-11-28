@@ -20,15 +20,99 @@ namespace WPF
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+		int broj;
+
 		public MainWindow()
 		{
 			InitializeComponent();
 			
 		}
 
-		private void btDugme_Click(object sender, RoutedEventArgs e)
-		{
-			lbNesto.Content = "Nesto iz koda";
+		private void Oduzmi_Click(object sender, RoutedEventArgs e)
+		{    
+			lbNesto.Content = --broj;
 		}
+
+		private void Nuliraj_Click(object sender, RoutedEventArgs e)
+		{
+			broj = 0;
+			lbNesto.Content = broj;
+		}
+
+		private void Dodaj_Click(object sender, RoutedEventArgs e)
+		{
+			lbNesto.Content = ++broj;
+			Artikal a = new Artikal();
+			a.unesiStanje(-15);
+			a.Stanje = -15;
+			lbNesto.Content = a.VrednostLager;
+
+		}
+	}
+
+	public class Artikal
+	{
+		public string Naziv { get; private set; }
+
+
+		public decimal cena;
+
+		public decimal VrednostLager
+		{ //read only property
+			get
+			{
+				return cena * Stanje;
+			}
+		}
+
+		public decimal dajLager()
+		{
+			return cena * Stanje;
+		}
+		
+		private int stanje;
+		public int Stanje //property
+		{
+			get
+			{
+				return stanje;
+			}
+
+			set
+			{
+				if (value < 0)
+				{
+					stanje = 0;
+				}
+				else
+				{
+					stanje = value;
+				}
+			}
+		}
+
+
+
+		//Metoda za citanje stanja
+		//getter
+		public int procitajStanje()
+		{
+			return stanje;
+		}
+		//Metodu za podesavanje
+		//setter
+		public void unesiStanje(int st)
+		{
+			
+			if (st < 0)
+			{
+				stanje = 0;
+			} else
+			{
+				stanje = st;
+			}
+
+		}
+
 	}
 }
