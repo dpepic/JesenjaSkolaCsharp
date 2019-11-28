@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,39 +21,47 @@ namespace WPF
 	/// </summary>
 	public partial class MainWindow : Window
 	{
-		int broj;
+		Artikal art = new Artikal();
 
 		public MainWindow()
 		{
 			InitializeComponent();
-			
+			art.Stanje = 32;
+			DataContext = art;
 		}
 
 		private void Oduzmi_Click(object sender, RoutedEventArgs e)
-		{    
-			lbNesto.Content = --broj;
+		{
+			art.Stanje--;
 		}
 
 		private void Nuliraj_Click(object sender, RoutedEventArgs e)
 		{
-			broj = 0;
-			lbNesto.Content = broj;
+		    art.Stanje = 0;
 		}
 
 		private void Dodaj_Click(object sender, RoutedEventArgs e)
 		{
-			lbNesto.Content = ++broj;
-			Artikal a = new Artikal();
-			a.unesiStanje(-15);
-			a.Stanje = -15;
-			lbNesto.Content = a.VrednostLager;
-
+			art.Stanje++;
 		}
 	}
 
-	public class Artikal
+	public class Artikal : INotifyPropertyChanged
 	{
-		public string Naziv { get; private set; }
+		private string naziv = "Plazam";
+		public string Naziv 
+		{ 
+			get
+			{
+				return naziv;
+			}
+			set
+			{
+				naziv = value;
+				PropertyChanged?.Invoke(this,
+								new PropertyChangedEventArgs("Naziv"));
+			}
+		}
 
 
 		public decimal cena;
@@ -71,6 +80,9 @@ namespace WPF
 		}
 		
 		private int stanje;
+
+		public event PropertyChangedEventHandler PropertyChanged;
+
 		public int Stanje //property
 		{
 			get
@@ -88,6 +100,16 @@ namespace WPF
 				{
 					stanje = value;
 				}
+
+				PropertyChanged?.Invoke(this,
+						new PropertyChangedEventArgs("Stanje"));
+				
+				/*Ovo iznad je isto kao i ovo:
+				if (PropertyChanged != null)
+				{
+					PropertyChanged.Invoke(this,
+						new PropertyChangedEventArgs("Stanje"));
+				}*/
 			}
 		}
 
