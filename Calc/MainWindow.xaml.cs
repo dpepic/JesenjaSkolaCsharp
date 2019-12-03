@@ -28,9 +28,33 @@ namespace Calc
 			DataContext = r;
 		}
 
-		private void br9_Click(object sender, RoutedEventArgs e)
+		private void Broj_Click(object sender, RoutedEventArgs e)
 		{
-			r.uvecajBroj(9);
+			Button b = sender as Button; //jednako sa (Button)sender
+			r.uvecajBroj(int.Parse(b.Content.ToString()));
+
+			//Moze da se resi i u jednom redu, ovako:
+			//r.uvecajBroj(int.Parse((sender as Button).Content.ToString()));
+		}
+
+		private void Clear_Click(object sender, RoutedEventArgs e)
+		{
+			r.Clear(false);
+		}
+
+		private void Sabiranje_Click(object sender, RoutedEventArgs e)
+		{
+			r.UnesiOperaciju('+');
+		}
+
+		private void Jednako_Click(object sender, RoutedEventArgs e)
+		{
+			r.UnesiOperaciju('=');
+		}
+
+		private void ClearErr_Click(object sender, RoutedEventArgs e)
+		{
+			r.Clear(true);
 		}
 	}
 }
