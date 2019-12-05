@@ -10,6 +10,10 @@
 		<Label Content="{Binding X}" HorizontalAlignment="Right" DockPanel.Dock="Top" FontSize="72" FontWeight="Bold"/>
 		<Button Click="Jednako_Click" DockPanel.Dock="Bottom" Content="=" FontSize="42"/>
 		<UniformGrid Columns="4">
+			<Button Click="Mem_Click" Content="MR" FontSize="42"/>
+			<Button Click="Mem_Click" Content="MC" FontSize="42"/>
+			<Button Click="Mem_Click" Content="M+" FontSize="42"/>
+			<Button Click="Mem_Click" Content="M-" FontSize="42"/>
 			<Button Click="Broj_Click" Content="7" FontSize="42"/>
 			<Button Click="Broj_Click" Content="8" FontSize="42"/>
 			<Button Click="Broj_Click" Content="9" FontSize="42"/>

@@ -31,7 +31,7 @@ namespace Calc
 		private void Broj_Click(object sender, RoutedEventArgs e)
 		{
 			Button b = sender as Button; //jednako sa (Button)sender
-			r.uvecajBroj(int.Parse(b.Content.ToString()));
+			r.X = int.Parse(b.Content.ToString());
 
 			//Moze da se resi i u jednom redu, ovako:
 			//r.uvecajBroj(int.Parse((sender as Button).Content.ToString()));
@@ -44,17 +44,23 @@ namespace Calc
 
 		private void Sabiranje_Click(object sender, RoutedEventArgs e)
 		{
-			r.UnesiOperaciju('+');
+			r.Op = '+';
 		}
 
 		private void Jednako_Click(object sender, RoutedEventArgs e)
 		{
-			r.UnesiOperaciju('=');
+			r.Op = '=';
 		}
 
 		private void ClearErr_Click(object sender, RoutedEventArgs e)
 		{
 			r.Clear(true);
+			
+		}
+
+		private void Mem_Click(object sender, RoutedEventArgs e)
+		{
+			r.MemorijaOp((sender as Button).Content.ToString().ToCharArray()[1]);
 		}
 	}
 }

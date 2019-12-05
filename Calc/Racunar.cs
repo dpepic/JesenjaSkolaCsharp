@@ -10,62 +10,91 @@ namespace Calc
 	class Racunar : INotifyPropertyChanged
 	{
 		private decimal x;
-		public decimal X 
+		public decimal X
 		{
 			get => x;
 			set
 			{
-				x = value;
+				if (BilaOperacija)
+				{
+					x = 0;
+					BilaOperacija = false;
+				}
+				x = x * 10 + value;
 				PropertyChanged?.Invoke(this,
 					new PropertyChangedEventArgs("X"));
 			}
 		}
 
-		public decimal Y { set; get; }
+		private decimal Y { set; get; }
 
-		public char Op { set; get; }
-
-		public event PropertyChangedEventHandler PropertyChanged;
-
-		public void UnesiOperaciju(char o)
+		private decimal mem;
+		private decimal Mem
 		{
-			if (Op == '\0')
+			get => mem;
+			set
 			{
-				Y = X;
-				X = 0;
-				Op = o;
-			} else
-			{
-				switch(Op)
+				if (value == 0)
 				{
-					case '+':
-						X += Y;
-						break;
+					mem = 0;
 				}
-				if (o != '=')
+				else
+				{
+					mem += value;
+				}
+			}
+		}
+
+		public void MemorijaOp(char o)
+		{
+
+		}
+
+		private char op;
+		public char Op
+		{
+			set
+			{
+				if (op == '\0')
 				{
 					Y = X;
 					X = 0;
-					Op = o;
-				} else
+					op = value;
+				}
+				else
 				{
-					Op = '\0';
+					switch (op)
+					{
+						case '+':
+							X += Y;
+							break;
+					}
+					if (value != '=')
+					{
+						Y = X;
+						BilaOperacija = true;
+						op = value;
+					}
+					else
+					{
+						op = '\0';
+					}
 				}
 			}
-			
+			get => op;
 		}
 
-		public void uvecajBroj(int br)
-		{
-			X = X * 10 + br;
-		}
+		public event PropertyChangedEventHandler PropertyChanged;
+
+		private bool BilaOperacija;
 
 		public void Clear(bool error)
 		{
 			if (error)
-			{					
+			{
 				X = 0;
-			} else
+			}
+			else
 			{
 				X = 0;
 				Y = 0;
