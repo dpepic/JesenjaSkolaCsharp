@@ -15,15 +15,20 @@ namespace Calc
 			get => x;
 			set
 			{
-				if (BilaOperacija)
-				{
-					x = 0;
-					BilaOperacija = false;
-				}
-				x = x * 10 + value;
+				x = value;
 				PropertyChanged?.Invoke(this,
 					new PropertyChangedEventArgs("X"));
 			}
+		}
+
+		public void UnesiBroj(int br)
+		{
+			if (BilaOperacija)
+			{
+				X = 0;
+				BilaOperacija = false;
+			}
+			X = X * 10 + br;
 		}
 
 		private decimal Y { set; get; }
@@ -47,7 +52,25 @@ namespace Calc
 
 		public void MemorijaOp(char o)
 		{
-
+			BilaOperacija = true;
+			switch (o)
+			{
+				case 'C':
+					Mem = 0;
+					break;
+				case 'R':
+					if (Mem != 0)
+					{
+						X = Mem;
+					}
+					break;
+				case '+':
+					Mem = X;
+					break;
+				case '-':
+					Mem = -X;
+					break;
+			}
 		}
 
 		private char op;

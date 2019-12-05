@@ -31,7 +31,7 @@ namespace Calc
 		private void Broj_Click(object sender, RoutedEventArgs e)
 		{
 			Button b = sender as Button; //jednako sa (Button)sender
-			r.X = int.Parse(b.Content.ToString());
+			r.UnesiBroj(int.Parse(b.Content.ToString()));
 
 			//Moze da se resi i u jednom redu, ovako:
 			//r.uvecajBroj(int.Parse((sender as Button).Content.ToString()));
