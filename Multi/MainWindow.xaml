@@ -1,0 +1,16 @@
+﻿<Window x:Class="Multi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Multi"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+	<StackPanel>
+		<Button Content="Test" Height="100" Click="Button_Click"/>
+		<ComboBox Name="combo" FontSize="30" SelectionChanged="combo_SelectionChanged"/>
+		<Label Content="{Binding Naziv}" FontSize="42"/>
+		<Label Content="{Binding Cena}" FontSize="42"/>
+		<DataGrid Name="tabela" IsReadOnly="True" SelectionMode="Single" FontSize="25"/>
+	</StackPanel>
+</Window>
