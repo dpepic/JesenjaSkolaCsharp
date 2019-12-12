@@ -1,0 +1,24 @@
+﻿<Window x:Class="WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+	<DockPanel>
+		<StackPanel DockPanel.Dock="Right" Width="150" CanHorizontallyScroll="True" CanVerticallyScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True">
+			<Button Name="Oduzmi" Content="--" FontSize="72" Click="Oduzmi_Click" />
+			<Button Name="Nuliraj" Content="0" FontSize="72" Click="Nuliraj_Click" Margin="20"/>
+			<Button Name="Dodaj" Content="++" FontSize="72" Click="Dodaj_Click" Margin="20"/>
+		</StackPanel>
+		<StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom">
+			<Label Content="{Binding Naziv, Mode=OneWay}" FontSize="42"/>
+			<TextBox Text="{Binding Stanje, UpdateSourceTrigger=PropertyChanged}" FontSize="42"/>
+		</StackPanel>
+
+		<Label Content="{Binding Stanje}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="74"/>
+	</DockPanel>
+	
+</Window>

@@ -1,0 +1,17 @@
+﻿<Window x:Class="MutliWindowEdit.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MutliWindowEdit"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+	<StackPanel>
+		<DataGrid Name="dg"  IsReadOnly="true" ColumnWidth="*" SelectionMode="Single" FontSize="42"/>
+		<StackPanel Orientation="Horizontal" Margin="0 30 0 0" HorizontalAlignment="Center">
+			<Button Content="Brisanje" Click="Button_Brisanje" FontSize="42"/>
+			<Button Content="Izmena" Click="Button_Izmena" Margin="20 0 20 0" FontSize="42"/>
+			<Button Content="Dodavanje" Click="Button_Dodavanje" FontSize="42"/>
+		</StackPanel>
+	</StackPanel>
+</Window>

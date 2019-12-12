@@ -1,0 +1,35 @@
+﻿<Window x:Class="Calc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calc"
+        mc:Ignorable="d"
+        Title="Kalkulator" Height="500" Width="400" ResizeMode="NoResize">
+	<DockPanel>
+		<Label Content="{Binding X}" HorizontalAlignment="Right" DockPanel.Dock="Top" FontSize="72" FontWeight="Bold"/>
+		<Button Click="Jednako_Click" DockPanel.Dock="Bottom" Content="=" FontSize="42"/>
+		<UniformGrid Columns="4">
+			<Button Click="Mem_Click" Content="MR" FontSize="42"/>
+			<Button Click="Mem_Click" Content="MC" FontSize="42"/>
+			<Button Click="Mem_Click" Content="M+" FontSize="42"/>
+			<Button Click="Mem_Click" Content="M-" FontSize="42"/>
+			<Button Click="Broj_Click" Content="7" FontSize="42"/>
+			<Button Click="Broj_Click" Content="8" FontSize="42"/>
+			<Button Click="Broj_Click" Content="9" FontSize="42"/>
+			<Button Click="Sabiranje_Click" Content="+" FontSize="42"/>
+			<Button Click="Broj_Click" Content="4" FontSize="42"/>
+			<Button Click="Broj_Click" Content="5" FontSize="42"/>
+			<Button Click="Broj_Click" Content="6" FontSize="42"/>
+			<Button Content="-" FontSize="42"/>
+			<Button Click="Broj_Click" Content="1" FontSize="42"/>
+			<Button Click="Broj_Click" Content="2" FontSize="42"/>
+			<Button Click="Broj_Click" Content="3" FontSize="42"/>
+			<Button Content="*" FontSize="42"/>
+			<Button Click="Broj_Click" Content="0" FontSize="42"/>
+			<Button Click="Clear_Click" Content="C" FontSize="42"/>
+			<Button Click="ClearErr_Click" Content="CE" FontSize="42"/>
+			<Button Content="/" FontSize="42"/>
+		</UniformGrid>
+	</DockPanel>
+</Window>

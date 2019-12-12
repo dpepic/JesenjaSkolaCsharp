@@ -1,0 +1,21 @@
+﻿<Window x:Class="mw.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mw"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
+	<StackPanel>
+		<Label Content="{Binding Naziv}" FontSize="42"/>
+		<Label Content="{Binding Cena}" FontSize="42"/>
+		<ComboBox Name="cmb" FontSize="42" SelectionChanged="cmb_SelectionChanged"/>
+		<DataGrid Margin="50" Name="dg" IsReadOnly="True" SelectionMode="Single" FontSize="42" ColumnWidth="*"/>
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+			<Button Content="Obrisi" Click="Button_Obrisi"	 Margin="20 0" FontSize="42"/>
+			<Button Content="Izmeni" Click="Button_Izmeni" Margin="20 0" FontSize="42"/>
+			<Button Content="Dodaj" Click="Button_Dodaj" Margin="20 0" FontSize="42"/>
+			<Button Content="Prodaj" Click="Button_Prodaj" Margin="20 0" FontSize="42"/>
+		</StackPanel>
+	</StackPanel>
+</Window>

@@ -1,0 +1,17 @@
+﻿<Window x:Class="mw.Editor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mw"
+        mc:Ignorable="d"
+        Title="Editor" Height="450" Width="800" DataContextChanged="Window_DataContextChanged">
+	<UniformGrid Columns="2">
+		<Label Content="Naziv: " FontSize="42"/>
+		<TextBox Name="nzv" Text="{Binding Naziv, UpdateSourceTrigger=Explicit}" FontSize="42"/>
+		<Label Content="Cena: " FontSize="42"/>
+		<TextBox Name="cena" Text="{Binding Cena, UpdateSourceTrigger=Explicit}" FontSize="42"/>
+		<Button Click="Button_Click"	 Content="Cancel" FontSize="42"/>
+		<Button Click="Button_OK" Content="OK" FontSize="42"/>
+	</UniformGrid>
+</Window>
