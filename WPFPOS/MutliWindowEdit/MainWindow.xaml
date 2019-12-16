@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 	<StackPanel>
-		<DataGrid Name="dg"  IsReadOnly="true" ColumnWidth="*" SelectionMode="Single" FontSize="42"/>
+		<ScrollViewer>
+			<DataGrid Name="dg"  IsReadOnly="true" ColumnWidth="*" SelectionMode="Single" FontSize="42" VerticalScrollBarVisibility="Visible" MaxHeight="300"/>
+		</ScrollViewer>
 		<StackPanel Orientation="Horizontal" Margin="0 30 0 0" HorizontalAlignment="Center">
 			<Button Content="Brisanje" Click="Button_Brisanje" FontSize="42"/>
 			<Button Content="Izmena" Click="Button_Izmena" Margin="20 0 20 0" FontSize="42"/>

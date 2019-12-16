@@ -1,0 +1,14 @@
+﻿<Window x:Class="Nasledjivanje.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Nasledjivanje"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+	<StackPanel>
+		<Label Name="lb" FontSize="42"/>
+		<Button Content="Osoba" FontSize="42" Name="d_Osoba" Click="d_Osoba_Click"/>
+		<Button Content="Zaposleno Lice" FontSize="42" Name="d_ZP" Click="d_ZP_Click"/>
+	</StackPanel>
+</Window>
