@@ -23,5 +23,19 @@ namespace Nasledjivanje
 			return $"Ja sam {Ime} {Prezime}, JMBG mi je {JMBG}";
 		}
 
+		public override bool Equals(object obj)
+		{
+			if (obj is Osoba o && o.Ime == this.Ime &
+				o.Prezime == this.Prezime &&
+				o.JMBG == this.JMBG)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,9 +24,16 @@ namespace Nasledjivanje
 		ZaposlenoLice zl = new ZaposlenoLice("Djura", "Djurovica", 4000);
 		Osoba o = new Osoba("Pera", "Peric");
 
+		ObservableCollection<Osoba> sveOsobe = new 
+			ObservableCollection<Osoba>();
+		
 		public MainWindow()
 		{
 			InitializeComponent();
+			sveOsobe.Add(new Osoba("Pera", "Peric"));
+			sveOsobe.Add(new ZaposlenoLice("Neko", "Nekic", 324));
+			sveOsobe.Add(new PenzionisanoLice(200, "Trece", "Lice"));
+			cmb.ItemsSource = sveOsobe;
 		}
 
 		private void d_Osoba_Click(object sender, RoutedEventArgs e)
@@ -35,7 +43,11 @@ namespace Nasledjivanje
 
 		private void d_ZP_Click(object sender, RoutedEventArgs e)
 		{
-			lb.Content = zl.ToString();
+			Osoba a = new Osoba("Pera", "Peric");
+			Osoba b = new Osoba("Pera", "Peric");
+
+			lb.Content = a.Equals(b);
+			
 		}
 	}
 }

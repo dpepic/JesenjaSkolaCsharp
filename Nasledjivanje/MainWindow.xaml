@@ -10,5 +10,6 @@
 		<Label Name="lb" FontSize="42"/>
 		<Button Content="Osoba" FontSize="42" Name="d_Osoba" Click="d_Osoba_Click"/>
 		<Button Content="Zaposleno Lice" FontSize="42" Name="d_ZP" Click="d_ZP_Click"/>
+		<ComboBox Name="cmb" FontSize="30"/>
 	</StackPanel>
 </Window>
