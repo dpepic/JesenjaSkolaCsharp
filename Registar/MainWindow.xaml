@@ -1,0 +1,19 @@
+﻿<Window x:Class="Registar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Registar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+	<DockPanel>
+		<ComboBox Name="cmb" DockPanel.Dock="Top" FontSize="42"/>
+		<Label Name="lbl" DockPanel.Dock="Top" FontSize="42"/>
+		<StackPanel HorizontalAlignment="Center" Orientation="Horizontal" DockPanel.Dock="Bottom">
+			<Button Content="Dodaj" Click="DodajOsobu_Click" FontSize="42"/>
+			<Button Content="Izmeni" FontSize="42"/>
+			<Button Content="Ukloni" FontSize="42"/>
+		</StackPanel>
+		<DataGrid Name="dg" FontSize="42"/>
+	</DockPanel>
+</Window>
