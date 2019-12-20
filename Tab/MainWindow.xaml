@@ -1,0 +1,16 @@
+﻿<Window x:Class="Tab.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tab"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+	<TabControl>
+		<TabItem Name="prviTab" Header="Test" FontSize="42">
+			<Button Content="Test" FontSize="42"/>
+		</TabItem>
+		<TabItem Header="2" FontSize="42"/>
+		<TabItem Header="3" FontSize="42"/>
+	</TabControl>
+</Window>
