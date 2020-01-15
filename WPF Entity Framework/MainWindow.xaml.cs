@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
@@ -21,13 +22,25 @@ namespace WPF_Entity_Framework
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window
+	public partial class MainWindow : Window, INotifyPropertyChanged
 	{
 		Baza db = new Baza();
 
-		public string Unos { get; set; }
+		private string unos;
+		public string Unos 
+		{ 
+			get => unos; 
+			set
+			{
+				unos = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Unos"));
+			}
+		}
 
 		private string pretraga;
+
+		public event PropertyChangedEventHandler PropertyChanged;
+
 		public string Pretraga
 		{
 			get => pretraga;
@@ -37,8 +50,8 @@ namespace WPF_Entity_Framework
 				pretraga = value;
 
 				db = new Baza();
-				db.Probe.Where(p => p.tekst.Contains(pretraga)).ToList();
-				dg.ItemsSource = db.Probe.Local;
+				dg.ItemsSource = db.Probe.Where(p => p.tekst.Contains(pretraga)).ToList();
+				
 
 				//if ((!string.IsNullOrEmpty(pretraga) && !string.IsNullOrWhiteSpace(pretraga)))
 				//{
@@ -75,6 +88,8 @@ namespace WPF_Entity_Framework
 			{
 				db.Probe.Add(new Proba(Unos));
 				db.SaveChanges();
+				db = new Baza();
+				dg.ItemsSource = db.Probe.ToList();
 			}
 		}
 
@@ -85,6 +100,7 @@ namespace WPF_Entity_Framework
 				{
 					(dg.SelectedItem as Proba).tekst = Unos;
 					db.SaveChanges();
+					
 				}
 		}
 
@@ -94,6 +110,8 @@ namespace WPF_Entity_Framework
 			{
 				db.Probe.Remove(dg.SelectedItem as Proba);
 				db.SaveChanges();
+				db = new Baza();
+				dg.ItemsSource = db.Probe.ToList();
 			}
 		}
 
@@ -113,16 +131,27 @@ namespace WPF_Entity_Framework
 		public DbSet<Proba> Probe { get; set; }
 	}
 
-	public class Proba
+	public class Proba : INotifyPropertyChanged
 	{
 		[Key]
 		public int broj { get; set; }
-		public string tekst { get; set; }
+		private string t;
+		public string tekst 
+		{ 
+			get => t; 
+			set
+			{
+				t = value;
+				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("tekst"));
+			}
+		}
 		
 		public Proba(string s)
 		{
 			tekst = s;
 		}
 		public Proba() { }
+
+		public event PropertyChangedEventHandler PropertyChanged;
 	}
 }

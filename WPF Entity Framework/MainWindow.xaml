@@ -10,7 +10,7 @@
 		<StackPanel DockPanel.Dock="Top">
 			<TextBox Text="{Binding Unos,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay,NotifyOnTargetUpdated=True}" FontSize="42"/>
 			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-				<Button Content="Unos" Name="unos" Click="unos_Click" FontSize="42"/>
+				<Button Content="Unos" Name="unoss" Click="unos_Click" FontSize="42"/>
 				<Button Content="Izmena" Name="izmena" Click="izmena_Click"	  FontSize="42"/>
 				<Button Content="Brisanje" Name="brisanje" Click="brisanje_Click"	  FontSize="42"/>
 			</StackPanel>
