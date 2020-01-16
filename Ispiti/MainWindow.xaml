@@ -1,0 +1,22 @@
+﻿<Window x:Class="Ispiti.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ispiti"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+	<StackPanel>
+		<TextBox Name="txtPretraga" Text="{Binding Pretraga,UpdateSourceTrigger=PropertyChanged}" FontSize="42"/>
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+			<Button Content="Dodaj" Name="dodavanje" Click="dodavanje_Click" FontSize="42"/>
+			<Button Content="Izmeni" Name="izmena" Click="izmena_Click"	  FontSize="42"/>
+			<Button Content="Ukloni" Name="brisanje" Click="brisanje_Click"	  FontSize="42"/>
+		</StackPanel>
+		<TabControl>
+			<TabItem Header="Studenti" FontSize="42">
+				<DataGrid Name="dgStudenti" FontSize="42" IsReadOnly="True" SelectionMode="Single" ColumnWidth="*" />
+			</TabItem>
+		</TabControl>
+	</StackPanel>
+</Window>

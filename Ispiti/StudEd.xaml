@@ -1,0 +1,24 @@
+﻿<Window x:Class="Ispiti.StudEd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ispiti"
+        mc:Ignorable="d"
+        Title="StudEd" Height="450" Width="800" WindowStyle="None">
+	<Window.BindingGroup>
+		<BindingGroup/>
+	</Window.BindingGroup>
+	<UniformGrid Columns="2">
+		<Label Content="Indeks:" FontSize="42"/>
+		<TextBox Text="{Binding BrIndeksa,UpdateSourceTrigger=Explicit}" FontSize="42"/>
+		<Label Content="Ime:" FontSize="42"/>
+		<TextBox Text="{Binding Ime,UpdateSourceTrigger=Explicit}" FontSize="42"/>
+		<Label Content="Prezime:" FontSize="42"/>
+		<TextBox Text="{Binding Prezime,UpdateSourceTrigger=Explicit}" FontSize="42"/>
+		<Label Content="Broj bodova:" FontSize="42"/>
+		<TextBox Text="{Binding BrojBodova,UpdateSourceTrigger=Explicit}" FontSize="42"/>
+		<Button Content="Odustani" FontSize="42" Name="odust" Click="odust_Click"	/>
+		<Button Content="OK" FontSize="42" Name="ok" Click="ok_Click"	/>
+	</UniformGrid>
+</Window>
