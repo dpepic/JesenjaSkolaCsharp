@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,33 +23,48 @@ namespace Delegati
 	{
 		Alarm a = new Alarm();
 		Civil c = new Civil();
-		Vatrogasac v = new Vatrogasac();
+
 		public MainWindow()
 		{
 			InitializeComponent();
 			Civil asd = new Civil();
 			asd.Slusaj(a);
-			v.Slusaj(a);
-			c.Slusaj(a);
+
 			
 		}
 
 		private void btn_Click(object sender, RoutedEventArgs e)
 		{
-		 a.OglasiSe();
+			MessageBox.Show("Bla bla");
 		}
 
-		
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			MessageBox.Show("asdasd");
+			e.Handled = true;
+		}
 	}
 
 	public class Alarm
 	{
-		public delegate void Slusamo();
-		public Slusamo Slusaoci;
+		public delegate void SlusamoEventHandler(object KoJe, SlusamoEventArgs e);
+		public event SlusamoEventHandler Slusamo;
 
-		public void OglasiSe()
+		public class SlusamoEventArgs
 		{
-			Slusaoci?.Invoke();
+			public string taj;
+			public string onaj;
+			public int x;
+		}
+		
+		public void Neka()
+		{
+			//neka provera obavezno
+			onSlusamo();
+		}
+		private void onSlusamo()
+		{
+			Slusamo?.Invoke(this, new SlusamoEventArgs());
 		}
 		/* hrpa koda koji u stvari radi nesto*/
 	}
@@ -57,25 +73,12 @@ namespace Delegati
 	{
 		public void Slusaj(Alarm neki)
 		{
-			neki.Slusaoci += Reakcija;
+			neki.Slusamo += Reakcija;
 		}
 		
-		private void Reakcija()
+		private void Reakcija(object KoSalje, Alarm.SlusamoEventArgs e)
 		{
-			//return "Beeeezim!";
+			var nesto = KoSalje;
 		}
 	}
-	public class Vatrogasac
-	{
-		public void Slusaj(Alarm neki)
-		{
-			neki.Slusaoci += Rekacija;
-		}
-		public void Rekacija()
-		{
-			//return "Idem da gasim!!";
-		}
-	}
-
-	
 }

@@ -8,6 +8,11 @@
         Title="MainWindow" Height="450" Width="800">
 	<StackPanel>
 		<Button Content="Pokreni alarm" Name="btn" Click="btn_Click" FontSize="42"/>
+		<Button Name="Dugme2" Click="btn_Click" FontSize="42">
+			<Button.Content>
+				<Button Content="BLAB" FontSize="82" Click="Button_Click"/>
+			</Button.Content>
+		</Button>
 		<Label Content="kjh" Name="lbl" FontSize="42"/>
 	</StackPanel>
 </Window>
