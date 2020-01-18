@@ -85,6 +85,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ispiti", "Ispiti\Ispiti.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ispiti2", "Ispiti2\Ispiti2.csproj", "{D7225497-E6F0-4B27-A49D-DA4B26751053}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegati", "Delegati\Delegati.csproj", "{2B32D0FC-2CF0-4AFB-BB2F-C4525C3D610B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -227,6 +229,10 @@ Global
 		{D7225497-E6F0-4B27-A49D-DA4B26751053}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7225497-E6F0-4B27-A49D-DA4B26751053}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7225497-E6F0-4B27-A49D-DA4B26751053}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B32D0FC-2CF0-4AFB-BB2F-C4525C3D610B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B32D0FC-2CF0-4AFB-BB2F-C4525C3D610B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B32D0FC-2CF0-4AFB-BB2F-C4525C3D610B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B32D0FC-2CF0-4AFB-BB2F-C4525C3D610B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -266,6 +272,7 @@ Global
 		{E0335279-808B-470F-93B6-C5C7F3894CDB} = {E1484827-6A59-4204-94D9-4B15C8D55D8A}
 		{69AB2CBB-AF51-4D09-99A6-68E833BCE936} = {8AB0056C-53D5-4B02-AB1F-3C45AF548753}
 		{D7225497-E6F0-4B27-A49D-DA4B26751053} = {8AB0056C-53D5-4B02-AB1F-3C45AF548753}
+		{2B32D0FC-2CF0-4AFB-BB2F-C4525C3D610B} = {8AB0056C-53D5-4B02-AB1F-3C45AF548753}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5639B62F-32CD-4402-9E31-A5AAE9F6F9F7}
