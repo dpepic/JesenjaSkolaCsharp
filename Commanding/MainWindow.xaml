@@ -1,0 +1,19 @@
+﻿<Window x:Class="Commanding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Commanding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+	<StackPanel>
+		<StackPanel Orientation="Horizontal">
+			<Button Content="Cut" Command="ApplicationCommands.Cut" CommandTarget="{Binding ElementName=txt}" FontSize="42"/>
+			<Button Content="Paste" FontSize="42" Command="ApplicationCommands.Paste" CommandTarget="{Binding ElementName=txt}"/>
+		</StackPanel>
+		<TextBox Name="txt" FontSize="42"/>
+		<Button Name="test" Content="Test" FontSize="42" />
+		<CheckBox IsChecked="{Binding Moguce,UpdateSourceTrigger=PropertyChanged}" Content="Ovo je check" FontSize="42"/>
+		<Label Name="lbl" FontSize="42"/>
+	</StackPanel>
+</Window>
