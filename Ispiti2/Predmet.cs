@@ -22,5 +22,10 @@ namespace Ispiti2
 			Predavac = p;
 			BrojCasova = bc;
 		}
+
+		public override string ToString()
+		{
+			return $"{Naziv}, {Predavac}";
+		}
 	}
 }

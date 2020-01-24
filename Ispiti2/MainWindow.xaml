@@ -12,11 +12,14 @@
 			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
 				<Button Content="Dodaj" Name="dodavanje" Click="dodavanje_Click" FontSize="42"/>
 				<Button Content="Izmeni" Name="izmena" Click="izmena_Click"  FontSize="42"/>
-				<Button Content="Ukloni" Name="brisanje" Click="brisanje_Click"	  FontSize="42"/>
+				<Button Content="Ukloni" Name="brisanje" FontSize="42"/>
 			</StackPanel>
+			<Label Name="lbl" FontSize="42"/>
 		</StackPanel>
-		<TabControl>
-			<TabItem Header="Studenti" FontSize="42"/>
+		<TabControl SelectionChanged="TabControl_SelectionChanged">
+			<TabItem Header="Studenti" FontSize="42">
+				<DataGrid Name="dgStudenti" FontSize="42" ColumnWidth="*" IsReadOnly="True"/>
+			</TabItem>
 			<TabItem Header="Ispiti" FontSize="42"/>
 			<TabItem Header="Predmeti" FontSize="42">
 				<DataGrid Name="dgPredmeti" ColumnWidth="*" IsReadOnly="True"/>
